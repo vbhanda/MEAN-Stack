@@ -1,10 +1,12 @@
-import { Component } from "@angular/core";
-import { FormGroup, FormControl, Validators } from "@angular/forms";
+
+import {Component} from "@angular/core";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
     selector: 'app-signin',
     templateUrl: './signin.component.html'
 })
+
 export class SigninComponent {
     myForm: FormGroup;
 
@@ -17,9 +19,9 @@ export class SigninComponent {
         this.myForm = new FormGroup({
             email: new FormControl(null, [
                 Validators.required,
-                Validators.pattern("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")
+                Validators.pattern("^[_a-zA-Z0-9-]+(\\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*\\.(([0-9]{1,3})|([a-zA-Z]{2,3})|(aero|coop|info|museum|name))$"),
             ]),
-            password: new FormControl(null, Validators.required)
+            password: new FormControl(null, Validators.required),
         });
     }
 }

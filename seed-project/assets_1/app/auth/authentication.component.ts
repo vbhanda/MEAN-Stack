@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+
+import {Component} from "@angular/core";
 
 @Component({
     selector: 'app-authentication',
@@ -12,11 +13,12 @@ import { Component } from "@angular/core";
                 </ul>
             </nav>
         </header>
-        <div class="row spacing">
-           <router-outlet></router-outlet>
+        <div class="ros spacing">
+            <router-outlet></router-outlet>
         </div>
     `
 })
+
 export class AuthenticationComponent {
 
 }
